@@ -5,7 +5,8 @@ const App = () => {
     const [boards, setBoards] = useState([
         {id: 1, title:"TO DO", items: [{id: 1, title: 'Пойти в магазин'}, {id: 2, title: 'Выкинуть мусор'}] },
         {id: 2, title:"DOING", items: [{id: 3, title: 'Выпить воды'}, {id: 4, title: 'Помыть посуду'}] },
-        {id: 3, title:"VERIFY", items: [{id: 5, title: 'Позвонить маме'}, {id: 6, title: 'Почистить зубы'}] }
+        {id: 3, title:"VERIFY", items: [{id: 5, title: 'Позвонить маме'}, {id: 6, title: 'Почистить зубы'}] },
+        {id: 4, title:"DONE", items: [{id: 5, title: 'Позвонить маме'}, {id: 6, title: 'Почистить зубы'}] }
     ])
     const [currentBoard, setCurrentBoard] = useState(null)
     const [currentItem, setCurrentItem] = useState(null)
@@ -73,7 +74,7 @@ const App = () => {
                     onDrop = {(e) => dropCardHandler(e, board)}
 
                 >
-                    <div className = "board__title">
+                    <div className = "board_title">
                         {board.title}
                     </div>
                     {board.items.map(item =>
